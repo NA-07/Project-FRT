@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title> Bot4u</title>
+    <style>
+        #webchat {
+            height: 500px;
+            width: 100%;
+            backgroud-color:lightskyblue;
+        }
+        body {
+            background-image: url('https://github.com/Saket8538/Quickhealth/blob/main/images/chatbot.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-color: lightblue; 
+        }
+    </style>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+</head>
+<body>
+    <div id="webchat" role="main"></div>
+    <script>
+        const webChatSecret = "T2CLtBHZSnA.OGAfPZDMjP1HajTEmLwAafUgB6YOBdBrGIfYGWH1lEY";
+        window.WebChat.renderWebChat(
+            {
+                directLine: window.WebChat.createDirectLine({ token: webChatSecret }),
+                userID: 'YOUR_USER_ID',
+                username: 'YOUR_USERNAME',
+                locale: 'en-US',
+                styleOptions: {
+                    bubbleBackground: '#F4F4F4',
+                    bubbleFromUserBackground: '#F4F4F4'
+                }
+            },
+            document.getElementById('webchat')
+        );
+    </script>
+</body>
+</html>
